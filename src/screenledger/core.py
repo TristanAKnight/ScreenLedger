@@ -123,6 +123,7 @@ def load_png(root:Path, rel:str):
             p=p/part
             if p.is_symlink():raise ValueError('symlink asset')
             if not p.resolve().is_relative_to(root.resolve()):raise ValueError('path escape')
+        if not p.exists():raise FileNotFoundError(p)
         if not p.is_file() or p.stat().st_size>MAX_FILE:raise ValueError('not regular file or too large')
         data=p.read_bytes()
     if len(data)>MAX_FILE:raise ValueError('file too large')
