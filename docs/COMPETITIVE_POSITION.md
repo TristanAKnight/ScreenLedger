@@ -1,0 +1,3 @@
+# Differentiation hypothesis
+
+ScreenLedger does not compete with Git, Git LFS, image editors, or AssetLock. It is a structured handoff verifier for UI screens, independent requirements, states, geometry, and interactions. Existing handoff documentation and asset pipelines may already solve this problem for some teams. Test the tool against a shared checklist and a structured spreadsheet using identical synthetic UI kits. Measure omissions detected, first-run friction, time to complete, and whether a developer can implement the reference screen without invented decisions. The product should be simplified if a spreadsheet works just as well.

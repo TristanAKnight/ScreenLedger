@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0",
+  "projectId": "sample_puzzle",
+  "assetRoot": "assets",
+  "screens": [
+    {
+      "id": "main_menu",
+      "layout": {
+        "referenceViewport": {"width": 1080, "height": 1920},
+        "safeAreaInsetsPx": {"top": 80, "right": 48, "bottom": 96, "left": 48},
+        "scaling": "uniform_fit_center",
+        "letterboxColor": "#102030"
+      },
+      "components": [
+        {
+          "id": "background",
+          "kind": "image",
+          "boundsPx": {"x": 0, "y": 0, "width": 1080, "height": 1920},
+          "fitMode": "cover",
+          "zIndex": 0,
+          "allowUnsafeArea": true,
+          "unsafeAreaReason": "Decorative full bleed background",
+          "states": [{"name": "default", "asset": "ui/background.png"}]
+        },
+        {
+          "id": "new_game",
+          "kind": "button",
+          "boundsPx": {"x": 340, "y": 900, "width": 400, "height": 120},
+          "hitBoxPx": {"x": 320, "y": 880, "width": 440, "height": 160},
+          "fitMode": "contain",
+          "zIndex": 1,
+          "interaction": {"event": "open_difficulty", "behaviorNote": "Opens the difficulty selection screen"},
+          "states": [
+            {"name": "default", "asset": "ui/new_game_default.png"},
+            {"name": "pressed", "asset": "ui/new_game_pressed.png"}
+          ]
+        }
+      ]
+    }
+  ]
+}

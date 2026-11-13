@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0",
+  "projectId": "sample_puzzle",
+  "profile": "mobile_touch_v1",
+  "requiredScreens": [
+    {
+      "id": "main_menu",
+      "requiredComponents": [
+        {"id": "background", "kind": "image"},
+        {"id": "new_game", "kind": "button", "actionEvent": "open_difficulty"}
+      ]
+    }
+  ],
+  "waivers": []
+}

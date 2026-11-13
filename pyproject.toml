@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "screenledger-handoff"
+version = "1.0.0"
+description = "Offline, deterministic game UI handoff validator"
+requires-python = ">=3.10"
+dependencies = ["Pillow>=10,<13", "jsonschema>=4.18,<5"]
+license = "MIT"
+readme = "README.md"
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "build>=1,<2"]
+[project.scripts]
+screenledger = "screenledger.cli:main"
+[tool.setuptools.packages.find]
+where = ["src"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+[tool.setuptools.package-data]
+screenledger = ["demo/*.json", "demo/assets/ui/*.png"]
